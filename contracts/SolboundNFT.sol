@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.10;
+pragma solidity ^0.8.0;
 
 import "./ISolboundNFT.sol";
-import "./ISolboundNFTMetadata.sol"
+import "./ISolboundNFTMetadata.sol";
 import "./ISolboundNFTReceiver.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";

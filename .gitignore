@@ -1,0 +1,20 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+
+#Hardhat files
+cache
+artifacts
+
+# folders
+.openzeppelin/
+.idea/
+build/
+node_modules/
+
+# files
+*.env
+
+.vscode/
