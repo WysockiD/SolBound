@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/Context.sol";
 
-contract SolboundNFT is ISolboundNFT, Context {
+contract Ink is ISolboundNFT, Context {
     
     using Address for address;
     using Strings for uint256;
