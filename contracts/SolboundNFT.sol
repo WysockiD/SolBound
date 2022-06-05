@@ -20,7 +20,7 @@ contract SolboundNFT is ISolboundNFT, Context {
     string private _symbol;
 
     // Supply
-    uint256 public tokenSupply;
+    uint256 public tokenSupply = 0;
     
     // Mapping from token ID to owner address
     mapping(uint256 => address) private _owners;
@@ -150,8 +150,8 @@ contract SolboundNFT is ISolboundNFT, Context {
         for (uint256 i = 0; i < _mintAmount; i++) {
             _mint(msg.sender, tokenSupply);
             ++tokenSupply;
-        }
-        
+            
+        }   
     }
 
     /**
