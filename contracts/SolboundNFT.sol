@@ -18,9 +18,14 @@ contract SolboundNFT is ISolboundNFT, Context {
     
     // Token symbol
     string private _symbol;
+
+    // Supply
+    uint256 public tokenSupply = 0;
     
     // Mapping from token ID to owner address
     mapping(uint256 => address) private _owners;
+
+
     
     /**
     * @dev Initializes the contract by setting a `name` and a `symbol` to the token collection.
@@ -137,6 +142,16 @@ contract SolboundNFT is ISolboundNFT, Context {
         emit Transfer(address(0), to, tokenId);
 
         _afterTokenTransfer(address(0), to, tokenId);
+    }
+
+    function mint(uint256 _mintAmount) external payable {
+        require(_mintAmount > 0, "Need to mint at least 1 NFT");
+            
+        for (uint256 i = 0; i < _mintAmount; i++) {
+            _mint(msg.sender, tokenSupply);
+            ++tokenSupply;
+            
+        }   
     }
 
     /**
