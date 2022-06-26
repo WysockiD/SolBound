@@ -4,3 +4,4 @@ https://vitalik.ca/general/2022/01/26/soulbound.html
 
 Using Truffle to deploy and test.
 
+
